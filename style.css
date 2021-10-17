@@ -1,0 +1,159 @@
+.paper {
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS paperfold effect */
+
+/* body */
+
+body{
+  background: #56cfe1;
+  padding: 5%;
+  min-width: 650px;
+}
+
+h1 { margin: 0em }
+
+/* paper */
+
+.foldtr{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+  background: #fff;
+}
+
+.foldbr{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+  background: #fff;
+}
+
+.foldtl{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+  background: #fff;
+}
+
+.foldbl{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+  background: #fff;
+}
+
+/* paperfold using pseudo class */
+
+.foldtr:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 295 295 0;
+  border-color: #ddd #56cfe1;
+  transition: all ease .5s;
+}
+
+.foldbr:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 295 295 0 0;
+  border-color: #ddd #56cfe1;
+  transition: all ease .5s;
+}
+
+.foldtl:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 0 0 295 295;
+  border-color: #ddd #56cfe1;
+  transition: all ease .5s;
+}
+
+.foldbl:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 295 0 0 295;
+  border-color: #ddd #56cfe1;
+  transition: all ease .5s;
+}
+
+/* on hover animate slightly */
+
+.foldtr:hover:before {
+  border-width: 0 100 100 0;
+  border-color: #fff;
+}
+
+.foldbr:hover:before {
+  border-width: 100 100 0 0;
+  border-color: #fff;
+}
+
+.foldtl:hover:before {
+  border-width: 0 0 100 100;
+  border-color: #fff;
+}
+
+.foldbl:hover:before {
+  border-width: 100 0 0 100;
+  border-color: #fff;
+}
+
+/* buttons */
+
+#tlbtn {
+  display: none;
+}
+#tlbtn:checked + label > img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+
+#trbtn {
+  display: none;
+}
+#trbtn:checked + label > img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+
+#blbtn {
+  display: none;
+}
+#blbtn:checked + label > img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+
+#brbtn {
+  display: none;
+}
+#brbtn:checked + label > img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
